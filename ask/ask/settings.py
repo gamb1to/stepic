@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'qa'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,7 +50,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'qa.urls'
 
-WSGI_APPLICATION = 'ask.wsgi.application'
+WSGI_APPLICATION = 'qa.wsgi.application'
 
 
 # Database

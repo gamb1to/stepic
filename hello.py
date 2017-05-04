@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def hello_worker(env, start_response):
     status = '200 OK'
     headers = [('Content-Type', 'text/plain')]

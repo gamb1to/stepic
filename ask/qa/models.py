@@ -2,16 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class QuestionManager(models.Manager):
-    last = 0
-
-    def new():
-        res = Question.objects.filter(pk__gt=QuestionManager.last)
-        QuestionManager.last = max([question.pk for question in res])
-        return res
+    def new(self):
+        return self.order_by('-added_at')
 
 
-    def popular():
-        return Question.objects.order_by('-rating')[:5]
+    def popular(self):
+        return self.order_by('-rating')
 
 
 class Question(models.Model):

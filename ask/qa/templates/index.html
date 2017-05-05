@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ page.title }} questions 
+{% endblock %}
+
+{% block body %}
+    <h1> {{ page.title }} questions (page {{ page.number }}) </h1>
+    {% for question in page.object_list %}
+        <p> {{ question.title }} : <a href="{{ page.base_url }}{{ question.pk }}/">link</a> </p>
+    {% endfor %}
+{% endblock %}

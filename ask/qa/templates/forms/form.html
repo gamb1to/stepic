@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Ask form
+{% endblock %}
+
+{% block body %}
+    <form action='{% url "ask" %}' method='post'>
+        {{ form.as_ul }}
+        <br>
+        <input type='submit'>
+        {% csrf_token %}
+    </form>
+{% endblock %}

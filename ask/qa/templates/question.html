@@ -4,7 +4,7 @@
 
 {% block body %}
     <h1>{{ question.title }}</h1>
-    <p><i>{{ question.author }}</i>: {{ question.text }}</p>
+    <p><i>{{ question.author.username }}</i>: {{ question.text }}</p>
     <br>
     <b>Answer form:</b>
     <form action='{{ form.url }}' method='post'>
@@ -15,6 +15,6 @@
     <br>
     <b>Answers:</b>
     {% for answer in answers %}
-        <p><i>{{ answer.author }}</i>: {{ answer.text }}</p>
+        <p><i>{{ answer.author.username }}</i>: {{ answer.text }}</p>
     {% endfor %}
 {% endblock %}

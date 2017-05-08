@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+    <b>Login form:</b>
+    <form action='{{ form.url }}' method='post'>
+    {{ form.as_ul }}
+    <input type="submit">
+    {% csrf_token %}
+    </form>
+    <br>
+{% endblock %}
